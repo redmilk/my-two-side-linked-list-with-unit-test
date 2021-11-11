@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79124995273CD1300059DF60 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79124994273CD1300059DF60 /* Node.swift */; };
+		7977D8C5273C994800F33EE9 /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977D8C4273C994800F33EE9 /* LinkedListTest.swift */; };
+		7977D8CF273C997A00F33EE9 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977D8CE273C997A00F33EE9 /* LinkedList.swift */; };
 		79DC0884271475B100A3E7BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC0883271475B100A3E7BA /* AppDelegate.swift */; };
 		79DC0886271475B100A3E7BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC0885271475B100A3E7BA /* SceneDelegate.swift */; };
 		79DC0888271475B100A3E7BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC0887271475B100A3E7BA /* ViewController.swift */; };
@@ -15,7 +18,22 @@
 		79DC0890271475B300A3E7BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DC088E271475B300A3E7BA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7977D8C7273C994800F33EE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79DC0878271475B100A3E7BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79DC087F271475B100A3E7BA;
+			remoteInfo = SonyaStudy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		79124994273CD1300059DF60 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		7977D8C2273C994800F33EE9 /* LinkedListTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkedListTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7977D8C4273C994800F33EE9 /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
+		7977D8C6273C994800F33EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7977D8CE273C997A00F33EE9 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		79DC0880271475B100A3E7BA /* SonyaStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonyaStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DC0883271475B100A3E7BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79DC0885271475B100A3E7BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7977D8BF273C994800F33EE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79DC087D271475B100A3E7BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +62,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79124993273CD04E0059DF60 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				7977D8CE273C997A00F33EE9 /* LinkedList.swift */,
+				79124994273CD1300059DF60 /* Node.swift */,
+			);
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		7977D8C3273C994800F33EE9 /* LinkedListTest */ = {
+			isa = PBXGroup;
+			children = (
+				7977D8C4273C994800F33EE9 /* LinkedListTest.swift */,
+				7977D8C6273C994800F33EE9 /* Info.plist */,
+			);
+			path = LinkedListTest;
+			sourceTree = "<group>";
+		};
 		79DC0877271475B100A3E7BA = {
 			isa = PBXGroup;
 			children = (
 				79DC0882271475B100A3E7BA /* SonyaStudy */,
+				7977D8C3273C994800F33EE9 /* LinkedListTest */,
 				79DC0881271475B100A3E7BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				79DC0880271475B100A3E7BA /* SonyaStudy.app */,
+				7977D8C2273C994800F33EE9 /* LinkedListTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,20 +101,47 @@
 		79DC0882271475B100A3E7BA /* SonyaStudy */ = {
 			isa = PBXGroup;
 			children = (
-				79DC0883271475B100A3E7BA /* AppDelegate.swift */,
-				79DC0885271475B100A3E7BA /* SceneDelegate.swift */,
-				79DC0887271475B100A3E7BA /* ViewController.swift */,
-				79DC0889271475B100A3E7BA /* Main.storyboard */,
-				79DC088C271475B300A3E7BA /* Assets.xcassets */,
-				79DC088E271475B300A3E7BA /* LaunchScreen.storyboard */,
+				79124993273CD04E0059DF60 /* LinkedList */,
+				79DC0898271475C300A3E7BA /* ApplicationFiles */,
 				79DC0891271475B300A3E7BA /* Info.plist */,
 			);
 			path = SonyaStudy;
 			sourceTree = "<group>";
 		};
+		79DC0898271475C300A3E7BA /* ApplicationFiles */ = {
+			isa = PBXGroup;
+			children = (
+				79DC0887271475B100A3E7BA /* ViewController.swift */,
+				79DC0883271475B100A3E7BA /* AppDelegate.swift */,
+				79DC0885271475B100A3E7BA /* SceneDelegate.swift */,
+				79DC088C271475B300A3E7BA /* Assets.xcassets */,
+				79DC0889271475B100A3E7BA /* Main.storyboard */,
+				79DC088E271475B300A3E7BA /* LaunchScreen.storyboard */,
+			);
+			path = ApplicationFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7977D8C1273C994800F33EE9 /* LinkedListTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7977D8CB273C994800F33EE9 /* Build configuration list for PBXNativeTarget "LinkedListTest" */;
+			buildPhases = (
+				7977D8BE273C994800F33EE9 /* Sources */,
+				7977D8BF273C994800F33EE9 /* Frameworks */,
+				7977D8C0273C994800F33EE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7977D8C8273C994800F33EE9 /* PBXTargetDependency */,
+			);
+			name = LinkedListTest;
+			productName = LinkedListTest;
+			productReference = 7977D8C2273C994800F33EE9 /* LinkedListTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		79DC087F271475B100A3E7BA /* SonyaStudy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79DC0894271475B300A3E7BA /* Build configuration list for PBXNativeTarget "SonyaStudy" */;
@@ -96,6 +168,10 @@
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
+					7977D8C1273C994800F33EE9 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 79DC087F271475B100A3E7BA;
+					};
 					79DC087F271475B100A3E7BA = {
 						CreatedOnToolsVersion = 12.1;
 					};
@@ -115,11 +191,19 @@
 			projectRoot = "";
 			targets = (
 				79DC087F271475B100A3E7BA /* SonyaStudy */,
+				7977D8C1273C994800F33EE9 /* LinkedListTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7977D8C0273C994800F33EE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79DC087E271475B100A3E7BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,17 +217,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7977D8BE273C994800F33EE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7977D8C5273C994800F33EE9 /* LinkedListTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79DC087C271475B100A3E7BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				79DC0888271475B100A3E7BA /* ViewController.swift in Sources */,
+				79124995273CD1300059DF60 /* Node.swift in Sources */,
 				79DC0884271475B100A3E7BA /* AppDelegate.swift in Sources */,
+				7977D8CF273C997A00F33EE9 /* LinkedList.swift in Sources */,
 				79DC0886271475B100A3E7BA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7977D8C8273C994800F33EE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79DC087F271475B100A3E7BA /* SonyaStudy */;
+			targetProxy = 7977D8C7273C994800F33EE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		79DC0889271475B100A3E7BA /* Main.storyboard */ = {
@@ -165,6 +267,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7977D8C9273C994800F33EE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C23K8VGFDE;
+				INFOPLIST_FILE = LinkedListTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idanyl.test.LinkedListTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SonyaStudy.app/SonyaStudy";
+			};
+			name = Debug;
+		};
+		7977D8CA273C994800F33EE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C23K8VGFDE;
+				INFOPLIST_FILE = LinkedListTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idanyl.test.LinkedListTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SonyaStudy.app/SonyaStudy";
+			};
+			name = Release;
+		};
 		79DC0892271475B300A3E7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,6 +464,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7977D8CB273C994800F33EE9 /* Build configuration list for PBXNativeTarget "LinkedListTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7977D8C9273C994800F33EE9 /* Debug */,
+				7977D8CA273C994800F33EE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79DC087B271475B100A3E7BA /* Build configuration list for PBXProject "SonyaStudy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
