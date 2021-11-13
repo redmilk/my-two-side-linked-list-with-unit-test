@@ -16,6 +16,7 @@
 		79DC088B271475B100A3E7BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DC0889271475B100A3E7BA /* Main.storyboard */; };
 		79DC088D271475B300A3E7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DC088C271475B300A3E7BA /* Assets.xcassets */; };
 		79DC0890271475B300A3E7BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DC088E271475B300A3E7BA /* LaunchScreen.storyboard */; };
+		79ED650727400D58004F1FE9 /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ED650627400D58004F1FE9 /* LRUCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		79DC088C271475B300A3E7BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79DC088F271475B300A3E7BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79DC0891271475B300A3E7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79ED650627400D58004F1FE9 /* LRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		79DC0882271475B100A3E7BA /* SonyaStudy */ = {
 			isa = PBXGroup;
 			children = (
+				79ED650627400D58004F1FE9 /* LRUCache.swift */,
 				79124993273CD04E0059DF60 /* LinkedList */,
 				79DC0898271475C300A3E7BA /* ApplicationFiles */,
 				79DC0891271475B300A3E7BA /* Info.plist */,
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ED650727400D58004F1FE9 /* LRUCache.swift in Sources */,
 				79DC0888271475B100A3E7BA /* ViewController.swift in Sources */,
 				79124995273CD1300059DF60 /* Node.swift in Sources */,
 				79DC0884271475B100A3E7BA /* AppDelegate.swift in Sources */,

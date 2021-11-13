@@ -18,6 +18,11 @@ protocol LinkedListProtocol {
     func append(_ node: Node<T>)
     func prepend(_ node: Node<T>)
     func getNodeAtIndex(_ index: Int) -> Node<T>?
+    func removeAll()
+    @discardableResult
+    func removeElement(_ element: T) -> Bool
+    @discardableResult
+    func printAll() -> String?
 }
 
 
@@ -47,6 +52,7 @@ class LinkedList<T: Equatable & CustomStringConvertible>: LinkedListProtocol {
             return setupInitialNode(node)
         }
         head?.previous = node
+        node.next = head
         head = node
     }
     
@@ -62,12 +68,67 @@ class LinkedList<T: Equatable & CustomStringConvertible>: LinkedListProtocol {
         return currentNode
     }
     
+    func removeAll() {
+        head = nil
+        tail = nil
+    }
+    
+    @discardableResult
+    func removeElement(_ elementToDelete: T) -> Bool {
+        guard !isEmpty else { return false }
+        /// if element to delete is Head
+        if elementToDelete == head!.value {
+            return removeHead()
+        }
+        var currentNode = head
+        while getNextNode(forNode: currentNode) != nil {
+            currentNode = getNextNode(forNode: currentNode)
+            guard let value = currentNode?.value, value == elementToDelete else { continue }
+            let previousNode = currentNode?.previous
+            let nextNode = currentNode?.next
+            /// if next and previous nodes does exist
+            if previousNode != nil && nextNode != nil {
+                previousNode?.next = nextNode
+                nextNode?.previous = previousNode
+                /// if no previous node, we deal with head
+            } else if previousNode == nil {
+                nextNode?.previous = nil
+                head = nextNode
+            } else if nextNode == nil {
+                /// if no next node, we deal with tail
+                previousNode?.next = nil
+                tail = previousNode
+            }
+            return true
+        }
+        return false
+    }
+    
+    @discardableResult
+    func printAll() -> String? {
+        guard !isEmpty else { return nil }
+        var currentNode = head
+        var result: String = ""
+        result += "\(currentNode!.value)  "
+        while getNextNode(forNode: currentNode) != nil {
+            currentNode = getNextNode(forNode: currentNode)
+            result += "\(currentNode!.value)  "
+        }
+        return result
+    }
+    
     private func setupInitialNode(_ node: Node<T>?) {
         guard let node = node else { return }
         head = node
-        head!.next = node
         tail = node
-        tail!.previous = first
+    }
+    
+    private func removeHead() -> Bool {
+        guard head != nil else { return false }
+        let nodeAfterHead = getNextNode(forNode: head)
+        nodeAfterHead?.previous = nil
+        head = nodeAfterHead
+        return true
     }
     
     private func getNextNode(forNode node: Node<T>?) -> Node<T>? {
@@ -78,46 +139,3 @@ class LinkedList<T: Equatable & CustomStringConvertible>: LinkedListProtocol {
         node?.previous
     }
 }
-
-//struct LRU<Key: Hashable, Value> {
-//    var data: [Key: Value]
-//    var capacity: Int
-//
-//  init(capacity: Int) {
-//    self.capacity = capacity
-//
-//  }
-//
-//  func add(key: Key, val: Value) {
-//
-//  }
-//
-//  func get(key: Key) {
-//
-//  }
-//
-//}
-
-/**
- 
-a: 1
-c: 2
-e: 10
-
-
-get(e)
-e: 10
-a: 1
-c: 2
-
-get(a)
-a: 1
-e: 10
-c: 2
-
-add(z: 20)
-a: 1
-e: 10
-z: 20
- 
-*/
